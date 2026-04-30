@@ -711,7 +711,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <p>© 2025 A. All rights reserved.</p>
+  <p>&copy; <time id="year"></time> A. All rights reserved.</p>
   <p>Built with HTML, CSS & care.</p>
 </footer>
 
@@ -726,6 +726,7 @@
   }, { threshold: 0.1 });
 
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 </body>
 </html>
